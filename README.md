@@ -1,2 +1,2 @@
 # myTreehouse
-Projects from my Treehouse courswork
+*Projects from my Treehouse courswork*
