@@ -1,0 +1,19 @@
+<!-- 
+##  AUTHOR      :   Robert James Patterson
+##  DATE        :   11/17/17
+##  FILENAME    :   Shaping up with Angular-L1/include/_prodList.html  
+##  SYNOPSIS    :   product list HTML component     
+-->
+
+<div id="innerRow" class="row steel-blue-row">
+    <div ng-repeat="product in store.products">
+        <div ng-hide="product.soldOut">
+            <h2 class="aliceblue-fore-color"> {{product.name}} </h2>
+            <h3 class="red-fore-color"> {{product.price | currency}} </h3>
+            <p> {{product.description}} </p>
+            <button class="btn btn-primary" ng-show="product.canPurchase"> 
+                Add to cart </button>
+            <hr/>
+        </div>
+    </div>
+</div>

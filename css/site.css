@@ -1,0 +1,237 @@
+/*
+##  AUTHOR      :   Robert James Patterson
+##  DATE        :   11/17/2017
+##  FILENAME    :   http://www.casadebobo.com/
+##  SYNOPSIS    :   The framework previously known as AngularJS's play ground
+##
+*/
+
+/* Embedded fonts used in this site, stored in <sitename>/css/fonts */
+@font-face {
+    font-family: 'pypatsregular';
+    src: url('fonts/pypats-webfont.woff2') format('woff2'),
+         url('fonts/pypats-webfont.woff') format('woff'),
+         url('fonts/pypats-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'cartoon_freakregular';
+    src: url('fonts/cartoonfreak.woff2') format('woff2'),
+         url('fonts/cartoonfreak.woff') format('woff'),
+         url('fonts/cartoonfreak.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'waltographregular';
+    src: url('fonts/waltograph42-webfont.woff2') format('woff2'),
+         url('fonts/waltograph42-webfont.woff') format('woff'),
+         url('fonts/waltograph42-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'kentuckyfriedfontregular';
+    src: url('fonts/kentuckyfriedfont-webfont.woff2') format('woff2'),
+         url('fonts/kentuckyfriedfont-webfont.woff') format('woff'),
+         url('fonts/kentuckyfriedfont-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Define the page */
+html, body{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(179, 154, 154);
+}
+
+#top{
+    position: absolute;
+}
+
+#footer-spacer{
+    height: 36px;
+}
+
+#footer{
+    margin: auto;
+    border-top: 1px solid #000;
+    height: 35px;
+    text-align: center;
+}
+
+#holder{
+    /* position: absolute; */
+     width: 100%;
+     height: 100%
+ }
+ 
+ #holder img{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ #prod-panel{
+     width: 100%;
+     height: 100%;
+ }
+
+ #prod-panel h2{
+     font-family: "MS Seirf", Arial, Helvetica, sans-serif;
+     font-size: 16pt;
+     font-weight: 700;
+ }
+
+ #prod-panel h3{
+    font-family: "MS Seirf", Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+#prod-panel button{
+    font-family: "MS Seirf", Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: bold;
+    /*
+    color: aliceblue;
+    background-color: rgb(63, 8, 8);
+    */   
+}
+
+.pitt-style{
+    font-family: "pypatsregular", Arial, Helvetica, sans-serif;
+    font-size: 13pt;
+    color: yellow;
+    background-color: black; 
+}
+
+.ny-style {
+    font-family: "Clear Sans";
+    font-size: 1.5em;
+    color: rgb(43, 19, 99);
+    font-style: oblique;
+    padding: 1em;
+}
+
+.shape{
+    width: 25em;
+    height: 3em;
+    border: 0.1em solid #2c3e50;
+    margin: 5em;
+    line-height: 3em;
+    text-align: center;
+}
+
+.decoration{
+    text-decoration: underline;
+    font-size: 1.2em;
+    padding: 1em;
+    width: 15em;
+}
+
+.red-fore-color{
+    color: #e74a3a;
+    background-color: black;
+}
+
+.aliceblue-fore-color{
+    color: aliceblue;
+}
+
+.steel-blue-row{
+    text-align: center;
+    background-color: steelblue;
+    font-family: ""Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.background{
+    background-color: #ecf0f1;
+    font-size: 1.2em;
+    padding: 1em;
+    width: 15em;
+}
+.kentuky-fried-text{
+    font-family: "kentuckyfriedfontregular", Arial, Helvetica, sans-serif;
+   /* font-size: 18pt; */
+    font-weight: normal;
+    font-style: normal;  
+
+}
+
+.walt42-text{
+    font-family: "waltographregular", Arial, Helvetica, sans-serif;
+   /* font-size: 22pt; */
+    font-weight: normal;
+    font-style: normal;    
+}
+
+.casa-header{
+    font-family: "cartoon_freakregular", Arial, Helvetica, sans-serif;
+    font-size: 72pt;
+    font-weight: normal;
+    font-style: normal;
+    color: rgb(2, 25, 43);
+}
+
+.casa-header:hover{
+    font-size: 80pt;    
+}
+
+.cartoon_freak-text{
+    font-family: "cartoon_freakregular", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pypats-text{
+    font-family: "pypatsregular", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-size-19{
+    font-size: 19pt;
+}
+
+.center{
+    margin: auto;
+}
+
+.center-text{
+    text-align: center;     
+}
+
+.why-panel{
+    margin: auto;
+    text-align: center;
+}
+
+.hidden-text{
+    display: none;
+    font-family: "MS Seirf", Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+}
+
+.more-info{
+    color: rgb(71, 99, 13);
+    background-color: aliceblue;
+}
+
+.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+    border-color: #78FA89
+}

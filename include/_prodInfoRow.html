@@ -1,0 +1,64 @@
+<div class="row" ng-controller="PanelController as panel">
+    <div class="col-sm-5">
+        <img src="img/gem-02.gif" alt="gem-02.gif" />
+        <br />
+
+        <!-- These are the tabs -->
+        <section>
+            <ul class="nav nav-pills">
+                <li ng-class="{ active:panel.isSelected(1) }">
+                    <a href ng-click="panel.selectTab(1)">Description</a>
+                </li>
+                <li ng-class="{ active:panel.isSelected(2) }">
+                    <a href ng-click="panel.selectTab(2)">Specifications</a>
+                </li>
+                <li ng-class="{ active:panel.isSelected(3) }">
+                    <a href ng-click="panel.selectTab(3)">Reviews</a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- this value is here just so we can test the form -->
+        <hidden ng-init="product = store.products[0]"></hidden>
+        
+        <!-- This is the panel controlled by the tabs -->
+        <div class="panel" ng-show="panel.isSelected(1)">
+            <h4>Description</h4>
+            <blockquote>None as of yet</blockquote>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(2)">
+            <h4>Specifications</h4>
+            <blockquote>None as of yet</blockquote>
+        </div>
+        <div class="panel" ng-show="panel.isSelected(3)"> 
+            <h4>Reviews</h4>
+            <blockquote ng-repeat="review in product.reviews">
+                <b>Stars: {{review.stars}}</b>
+                {{review.body}}
+                <cite>{{review.author}}</cite>
+            </blockquote>
+            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+                    ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+                <blockquote>
+                    <b>Stars: {{reviewCtrl.review.stars}}</b><br/>
+                    {{reviewCtrl.review.body}}<br/>
+                    <cite>{{reviewCtrl.review.author}}</cite><br/>
+                </blockquote>
+                <select ng-model="reviewCtrl.review.stars" name="stars" required>
+                    <option value="1">1 star</option>
+                    <option value="2">2 star</option>
+                    <option value="3">3 star</option>
+                    <option value="4">4 star</option>
+                    <option value="5">5 star</option>
+                </select><br/>
+                <textarea ng-model="reviewCtrl.review.body" name="body" required></textarea><br/>
+                <input ng-model="reviewCtrl.review.author" type="email" name="author" required /><br/>
+                <input type="submit" value="Submit" />             
+            </form>
+        </div>
+        <hr />
+    </div>
+    <div class="col-sm-7">
+            <span class="pitt-style">Value of tab is: {{panel.tab}}</span>
+    </div>
+</div>
